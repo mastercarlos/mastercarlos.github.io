@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="estilos/style_p4.css">
+		<meta charset="utf-8">
+		<title>Plaguicida Ultrasónico Automático</title>
+    </head>
+<body>
+        <header>
+            <h1 align="center">PROYECTOS DE ELECTRONICA</h1>
+        </header>
+<aside>
+            <ul>
+                <li><a href="p1.html">Amplificador de audio de 100w</a></li>
+				<li><a href="p2.html">Transmisor Personal de AM</a></li>
+				<li><a href="p3.html">Transmisor de FM de 18w</a></li>
+				<li><a href="p4.html">Plaguicida Ultrasónico Automático</a></li>
+				<li><a href="p5.html">Robot de Riego Automático</a></li>
+				<li><a href="index.html">Volver al inicio</a></li>
+            </ul>
+    </aside>
+    <section>
+        <h1 align="center">Plaguicida Ultrasónico Automático</h1>
+		<p>Todos sabemos que los repelentes ultrasónicos tienen no solo un poder de eficacia superior a los venenos sino que, además,  son mucho menos riesgosos en un hogar y son mas limpios. Y si a esto le sumamos el que no hace falta recargarlo ni limpiarlo llegamos a la conclusión que es nuestra única alternativa al momento de elegir.</p>
+		<p>Pero los repelentes ultrasónicos tienen una desventaja: el acostumbramiento. Ciertas especies de plagas poseen un mecanismo biológico que les permite acostumbrarse a entornos adversos, entre ellos las emisiones ultrasónicas. Es por ello que los repelentes electrónicos funcionan de forma sorprendente al principio, pero luego pierden poder de acción.</p>
+		<p>Analizando esa problemática desarrollamos este circuito que permite definir hasta cinco frecuencias diferentes las cuales van secuenciando haciendo imposible el acostumbramiento por parte de las plagas. Incluso con pocos componentes se puede extender ese rango hasta un máximo de diez frecuencias.</p>
+    	<img src="imagenes/plag.gif" alt="" class="center"/> 
+		<p>Aunque se lo ve grande, este circuito es bastante simple. Los primeros dos integrados forman un secuencial de cinco canales. Cada canal está conectado a un potenciómetro que establece el valor de la frecuencia a generar. Estos potenciómetros es mejor hacerlos del tipo impresos (comúnmente llamados trimmers). Colocando los cursores de esos potenciómetros en posiciones diferentes unos de otros logramos establecer cinco frecuencias diferentes que serán seleccionadas en forma secuencial con el paso del tiempo. La señal ultrasónica es generada por el temporizador 555, el cual genera en su terminal de salida una señal cuadrada de aproximadamente 60KHz, dependiendo del potenciómetro actualmente seleccionado y su valor. El 4013 es un flip-flop que hace lo siguiente. A un pulso en su terminal 11 se pone en alto la pata 13 y baja la 12. Al próximo pulso pasa lo contrario y esto se repite cada vez que se reciba un nuevo pulso. Entonces cada una de las patas de salida del 4013 dispondrá la mitad de la frecuencia de entrada, o sea 30KHz aproximadamente. Por último la señal del flip-flop excita las bases de los transistores bipolares, los cuales ofician como amplificadores de salida.</p>
+		<p>Como parlante nosotros usamos un emisor ultrasónico de los que se emplean en censores de seguridad y alarma, pero cualquier tweeter de buena calidad puede servir.</p>
+		<p>Dado que el ser humano medio sólo puede oír sonidos por debajo de los 22KHz este sistema es inmune para las personas. Pero puede que si tiene un perro o gato este se ponga un poco loco. De ser así ajuste el sistema a fin de no molestar a su mascota pero si a las plagas.</p>
+		<p>Quizás de entrada no funcione, esto se debe a que la frecuencia en la que está emitiendo es inocua para las plagas. Ajuste el sistema de la siguiente manera:</p>
+		<p>Cuando cualquier plaga esté por la zona comience a ajustar los potenciómetros hasta que empiece a poner nerviosa al animal. Cuando vea que el efecto es el óptimo de por finalizado el ajuste.</p>
+		<h3>ACLARACION: </h3>
+		<p>Este dispositivo está diseñado para plagas tales como ratas, cucarachas, murciélagos y toda clase de pestes. Pero de ninguna manera está hecho para espantar a la suegra. Tenga en cuenta que la gente mayor oye poco, así que por mas que le apunte derecho, le ponga mas parlantes o se lo ate a la cabeza el sistema no la espantará. Y no insista por email, no tenemos un sistema antisuegra!!!.</p>
+	</section>
+    <footer>
+      <h2 align="center">Desarrollado por</h2>
+            <h3 align="center">Carlos</h3>
+</footer>
+</body>
+</html>

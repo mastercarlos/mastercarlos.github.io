@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="estilos/style_p5.css">
+		<meta charset="utf-8">
+		<title>Robot de Riego Automático</title>
+    </head>
+<body>
+        <header>
+            <h1 align="center">PROYECTOS DE ELECTRONICA</h1>
+        </header>
+<aside>
+            <ul>
+                <li><a href="p1.html">Amplificador de audio de 100w</a></li>
+				<li><a href="p2.html">Transmisor Personal de AM</a></li>
+				<li><a href="p3.html">Transmisor de FM de 18w</a></li>
+				<li><a href="p4.html">Plaguicida Ultrasónico Automático</a></li>
+				<li><a href="p5.html">Robot de Riego Automático</a></li>
+				<li><a href="index.html">Volver al inicio</a></li>
+            </ul>
+    </aside>
+    <section>
+        <h1 align="center">Robot de Riego Automático</h1>
+		<p>No hay asunto mas complicado a la hora de irse de vacaciones que el riego de nuestras plantas. Uno, por un lado, desea irse y olvidarse de todo. Pero por el otro lado se la pasa pensando en las plantas y como estarán de secas. Pensando en ello y en la cantidad de plantas que de nos murieron el verano pasado decidimos diseñar un robot que riegue las plantas por nosotros y aquí está. Este proyecto, que bien funciona y se paga solo, riega las plantas al amanecer durante un tiempo configurable por el usuario, por medio de un potenciómetro de ajuste. </p>
+    	<img src="imagenes/riego1.gif" alt="Robot de Riego Automático" class="center"/> 
+		<p>Como se observa se ha realizado íntegramente con electrónica discreta y sin el uso de relés. Es completamente de estado sólido, exceptuando claro está el bombeador de agua que es del tipo empleado en las bombas limpiaparabrisas de autos.<br><br>
+
+
+		El 4060 es un contador de 16 bits, con oscilador incorporado en la misma pastilla que se emplea como oscilador temporizador. Este integrado es el que se encarga de temporizar el funcionamiento de la bomba, en otras palabras, el tiempo que durará el riego. Para alterar ese tiempo basta con actuar sobre el potenciómetro de 1M el cual conviene que sea del tipo lineal para que la respuesta en todo su cursor sea la misma. El reset del contador se lleva a cabo subiendo a positivo la pata 12, que sucede en dos posibilidades: Cuando se conecta la alimentación (arranque) gracias al capacitor de 4.7nF o bien al hacerse positiva la salida del operacional B. Esto último se produce cuando se detecta la falta de luz (ver mas adelante). La salida Q14 se pone alta cuando la cuenta llega a 8912, conduciendo tensión el diodo 4148 y haciendo que el oscilador se detenga. Al detenerse el oscilador la cuenta se paraliza en el valor alcanzado y habrá terminado el tiempo de riego. Esto se vuelve a  cero y se habilita nuevamente el conteo al llegar el próximo amanecer. Las resistencias puestas a masa y a Vcc se emplean para establecer los niveles adecuados de tensión en cada punto del circuito.<br><br>
+
+		Como ven el circuito se encarga de simular la inteligencia del humano a la hora de regar las plantas y sin el uso de técnicas microprocesadas ni nada complicado.<br><br>
+
+		El circuito se alimenta con 12v y consume una corriente de 500mA en funcionamiento. Este consumo corresponde solamente al sistema electrónico. Habrá que sumarle el consumo de la bomba eléctrica que generalmente consume unos tres a cuatro amperios. Si se desea regar una gran superficie se puede optar por colocar un relé en lugar del motor y accionar una o varias bombas eléctricas de 220V que rieguen cada sector del jardín. El transistor TIP debe ser montado con un disipador de calor. El fotoresistor (LDR) debe ser apuntado hacia el cielo y lejos del alcance del foco de una lámpara u otro artefacto de iluminación que haya en la zona, para evitar que no detecte correctamente la noche. Los potenciómetros son ambos lineales, como ya se dijo y pueden ser sustituidos por resistencias variables para evitar que salgan del gabinete el cual debe ser del tipo estanco para exteriores. Es interesante colocar en paralelo con el motor un diodo LED rojo intermitente con su resistencia limitadora de corriente (1K o similar) para indicar el funcionamiento del sistema y otro en paralelo con la alimentación para indicar que está activado. Esto nos permitirá detectar problemas y nos facilitará la instalación y control periódico del sistema en general sin ser necesario abrir la tapa.<br><br>
+
+		Una opción interesante (que la hemos implementado recientemente y funciona muy bien) es usar una válvula de paso eléctrica como las que usan los lavarropas para regular el paso del agua al sistema de lavado. Estas válvulas son esencialmente solenoides que en estado de reposo no dejan pasar el agua, pero cuando se les da 220V hacen las veces de una canilla abierta. No le suman presión al sistema, pero en la mayoría de los casos sirven perfectamente.<br><br>
+
+		Si se tiene un tanque sisterna la opción ideal es colocar un bombeador de 220V del tipo utilizado para elevación de agua el cual se encargue de llevar riego hacia los rociadores. Recuerde prestar atención a la altura de los caños porque si se colocan los caños por debajo del nivel del tanque por mas que la bomba esté detenida por propia presión de caída el agua fluirá hacia las salidas. Es necesario colocar un flotante eléctrico que impida el funcionamiento del motor cuando no hay agua en el tanque para evitar que se queme el motor en caso de estar vacía la sisterna.  Estos flotantes accionan un interruptor de tres puntos. En nuestro caso hay que conectarlo en serie con el motor de manera que, cuando el cable que sujeta los flotantes esté totalmente extendido (tanque vacío) el circuito se abra y no permita el funcionamiento del mismo.<br><br>
+
+		De usar un bombín de limpiaparabrisas puede emplear como depósitos de agua bidones de agua para dispensadores frío/calor (los bebederos que instalan en oficinas y colegios) pero recuerde calcular correctamente la cantidad de agua a almacenar tomando en cuenta cuanta se vierte por día y cuantos días el sistema trabajará sin nuestra recarga.<br><br>
+
+		Aunque no está puesto en el esquema es bueno colocar entre el colector del TIP y el borne negativo del motor un fusible aéreo de 5A para evitar que el transistor se dañe en caso de ponerse en corto la bobina del bombín.</p>
+
+	</section>
+    <footer>
+      <h2 align="center">Desarrollado por</h2>
+            <h3 align="center">Carlos</h3>
+</footer>
+</body>
+</html>

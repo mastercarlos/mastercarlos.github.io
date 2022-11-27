@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="estilos/style_p3.css">
+		<meta charset="utf-8">
+		<title>Transmisor de FM de 18w</title>
+    </head>
+<body>
+        <header>
+            <h1 align="center">PROYECTOS DE ELECTRONICA</h1>
+        </header>
+<aside>
+            <ul>
+                <li><a href="p1.html">Amplificador de audio de 100w</a></li>
+				<li><a href="p2.html">Transmisor Personal de AM</a></li>
+				<li><a href="p3.html">Transmisor de FM de 18w</a></li>
+				<li><a href="p4.html">Plaguicida Ultrasónico Automático</a></li>
+				<li><a href="p5.html">Robot de Riego Automático</a></li>
+				<li><a href="index.html">Volver al inicio</a></li>
+            </ul>
+    </aside>
+    <section>
+        <h1 align="center">Transmisor de FM de 18w</h1>
+		<p>He aquí un transmisor para la banda de FM comercial que provee hasta 18 vatios de potencia. Ingresando una señal de audio de 1Vpp normalizada, la cual puede provenir de un mezclador o de una etapa codificadora de estéreo, este sistema permite cubrir todo un pueblo mediano de casas bajas o un barrio completo en una ciudad. De requerirse mas potencia se pueden construir e interconectar etapas de salida a fin de incrementar el área de cobertura de la emisora.</p>
+		<p>Antes de continuar aclaramos que este transmisor (con o sin etapas de potencia adicionales) requiere autorización estatal para operar legalmente.</p>
+		<p>Dado que el diagrama electrónico es demasiado ancho para colocarlo en pantalla hemos decidido fragmentarlo en dos, a fin de poder ser visto sin la necesidad de desplazarse de un lado a otro de la pantalla. El punto en donde lo cortamos sólo tiene dos conductores (representados por A y B) los cuales están señalizados con flechas.</p>
+    	<img src="imagenes/trans_fm1.gif" alt="" class="center"/> 
+		<img src="imagenes/trans_fm2.gif" alt="" class="center"/> 
+		<p>El capacitor variable conectado al colector del transistor BF199 permite ajustar la frecuencia de transmisión del circuito. El potenciómetro de 2K2 (el cual es del tipo lineal) hace las veces de sintonía fina. Una vez establecida la frecuencia de salida se deben ajustar los siguientes capacitores variables para calibrar el resto de las etapas del transmisor. Recuerde que estos ajustes se realizan desde el capacitor de la izquierda hacia el que está a la derecha. Recuerde que los ajustes iniciales es conveniente realizarlos con cargas fantasmas y no con la antena definitiva para evitar interferencias a otras estaciones.</p>
+		<p>Con respecto a la alimentación con 14V y 2.5A el circuito proporciona 15W, mientras que con 18V y 3.5A provee 18W, en todos los casos la fuente debe estar estabilizada.</p>
+		<p>El circuito debe ser construido sobre un impreso de epoxy con la cara superior (componentes) reservada para las pistas de interconexión y la cara inferior (soldaduras) para el plano de masa.</p>
+		<p>Nosotros no disponemos el diseño del circuito impreso. Si alguien construye este transmisor le agradeceremos nos haga llegar por email el diseño de la plaqueta.</p>
+		<p>Los transistores 2N3924, 2N4427 y BLY88 deben ser montados con disipadores de calor adecuados. En este tipo de componentes se usan disipadores circulares con forma de estrella. En el caso de los transistores 2Nxxxx el tamaño ideal es 20mm de diámetro por 10mm de altura, mientras que para el BLY88 deberá ser 75mm de diámetro por 100mm de altura. Es obligatorio el uso de grasa siliconada para optimizar la transferencia de temperatura de los transistores a sus disipadores. Recuerde que el calor excesivo (a parte de inestabilidad en la salida) puede causar daños a los componentes.</p>
+	</section>
+    <footer>
+      <h2 align="center">Desarrollado por</h2>
+            <h3 align="center">Carlos</h3>
+</footer>
+</body>
+</html>
